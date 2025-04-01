@@ -1,4 +1,4 @@
-CRIAÇÃO DE TABELAS
+CRIAÇÃO DE TABELAS:
 CREATE DATABASE NomeDB
     
 CREATE TABLE Cliente(
@@ -41,29 +41,28 @@ CREATE TABLE Cliente(
 
 3 - quando não colocamos not null o atributo pode sim ser vazio.
 
-4 - DEFAULT implica que, caso não informado, o valor será aquele.
+4 - DEFAULT implica que, caso não informado, o valor será aquele informado nos parâmetros.
 
 5 - São postos no fim:
-     PRIMARY KEY
-     FOREIGN KEY
-     UNIQUE
-     CHECK
+     PRIMARY KEY - chave primaria
+     FOREIGN KEY - chave estrangeira
+     UNIQUE - atributo não pode ser repetido em outras linhas
+     CHECK - regras de negócio
 
 -- lembrar sempre de setar data e usar a base certa, ex:
 USE NomeBD
 SET DATEFORMAT YMD
 
+
 Inserção de dados:
-• Modelos:
-
-   Direto:
-   INSERT INTO Clientes VALUES('123456','Ze Xibata','PF',null,null,null,DEFAULT)
+Direto:
+INSERT INTO Clientes VALUES('123456','Ze Xibata','PF',null,null,null,DEFAULT)
  
-   Especificando coluna:
-   INSERT INTO Tipo (codigo, nome) VALUES(2, 'Tecidos')
+Especificando coluna:
+INSERT INTO Tipo (codigo, nome) VALUES(2, 'Tecidos')
 
-   Múltiplos:
-   INSERT INTO Tipo (codigo, nome) VALUES
-   (2, 'Tecidos')
-   (1, 'Móveis')
-   (3, 'Eletro')
+Múltiplos:
+INSERT INTO Tipo (codigo, nome) VALUES
+(2, 'Tecidos')
+(1, 'Móveis')
+(3, 'Eletro')
