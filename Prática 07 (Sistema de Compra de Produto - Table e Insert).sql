@@ -17,7 +17,7 @@ Uf varchar(2) not null,
 Pais varchar(3) not null,
 
 CONSTRAINT pk_Cidade PRIMARY KEY(codigo),
-CONSTRAINT fk_Cidade_Pais FOREIGN KEY (Pais) REFERENCES Pais
+CONSTRAINT fk_Cidade_Pais FOREIGN KEY (Pais) REFERENCES Pais --uma coisa interessante é que no meu mysql só roda se eu especificar com REFERENCES Pais(sigla), apenas como está aqui não basta
 )
 
 Create Table Cliente (
