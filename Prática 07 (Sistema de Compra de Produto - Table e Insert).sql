@@ -35,7 +35,7 @@ obs text,
 
 CONSTRAINT pk_Cliente PRIMARY KEY (codigo),
 CONSTRAINT ck_Cliente_Tipo CHECK (tipo IN ('PF','PJ')),
-CONSTRAINT fk_Cliente_Cidade FOREIGN KEY (cidade)REFERENCES Cidade,
+CONSTRAINT fk_Cliente_Cidade FOREIGN KEY (cidade) REFERENCES Cidade
 )
 
 Create Table Tipo (
@@ -51,7 +51,7 @@ codigo int not null,
 nome varchar(40) not null,
 descricao varchar(45) not null,
 apresent varchar(30),
-venda money not null,
+venda money not null, --mysql também não aceita tipo money, aqui deve ser um DECIMAL(10,2), por exemplo
 custo money not null,
 quantest int not null,
 estmin int,
@@ -637,3 +637,4 @@ INSERT INTO ITENS (pedido, produto, preco, quant, desconto) VALUES (166, 2, 15.0
 INSERT INTO ITENS (pedido, produto, preco, quant, desconto) VALUES (166, 3, 30.00, 1, 0.00);
 
 --select * from itens
+--tive o trabalho massante de colocar ; ao fim de todos os inserts
